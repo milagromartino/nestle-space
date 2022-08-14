@@ -1,7 +1,7 @@
 <template>
-  <v-app-bar class="px-12" app elevation="0" color="#f3f0e9">
+  <v-app-bar class="px-15" app elevation="0" color="#f3f0e9">
     <div class="d-flex align-center">
-      <v-img src="/nestle-logo.png" width="120" contain class="img-filter" @click="$router.push('/')" />
+      <v-img src="/nestle-logo.png" width="120" contain class="img-filter" />
       <p class="mb-0 text-h6 ml-3">NestSpace</p>
     </div>
     <v-spacer></v-spacer>

@@ -1,8 +1,10 @@
 <template>
   <v-app>
     <app-bar></app-bar>
-    <v-main class="set-color px-16" >
-      <Nuxt />
+    <v-main >
+      <v-container>
+        <Nuxt />
+      </v-container>
     </v-main>
   </v-app>
 </template>
@@ -17,7 +19,4 @@ export default {
 </script>
 
 <style>
-.set-color{
-  background-color: #f3f0e9;
-}
 </style>
