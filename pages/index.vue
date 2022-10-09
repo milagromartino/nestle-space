@@ -23,22 +23,24 @@
         height="45"
       ></v-text-field>
       <menu-picker></menu-picker>
-      <v-text-field
+      <v-select
+        :items="items"
         outlined
         dense
         height="45"
         background-color="white"
         prepend-inner-icon="mdi-account"
         placeholder="Who is the reservation for? "
-      ></v-text-field>
-      <v-text-field
+      ></v-select>
+      <v-select
+        :items="reservatedFor"
         outlined
         dense
         height="45"
         background-color="white"
         prepend-inner-icon="mdi-account"
         placeholder="For who is it? "
-      ></v-text-field>
+      ></v-select>
       <v-checkbox v-model="checkbox" color="white" style="margin-top: -5px">
         <template #label>
           <p class="white--text mb-0">I wanna make a reservation for all day</p>
@@ -55,10 +57,10 @@
           Search the workspace
         </v-btn>
       </div>
-    <div>
-      <div class="circle" />
-      <img src="/NestSpace.png" class="img">
-    </div>
+      <div>
+        <div class="circle" />
+        <img src="/NestSpace.png" class="img" />
+      </div>
     </v-card>
   </div>
 </template>
@@ -70,20 +72,22 @@ export default Vue.extend({
   components: {
     MenuPicker,
   },
-  data(){
-    return{
+  data() {
+    return {
       checkbox: false,
+      items: ['Just for me', 'For someone else'],
+      reservatedFor: ['user1@example.com', 'user2@example.com', 'user3@example.com'],
     }
   },
 })
 </script>
 
 <style scoped>
-.title-text{
+.title-text {
   font-size: 20px;
   margin-top: 20px;
 }
-.card-text{
+.card-text {
   color: white;
   font-size: 20px;
 }
@@ -93,7 +97,7 @@ export default Vue.extend({
   bottom: -280px;
   right: 0;
 }
-.field-size{
+.field-size {
   width: 400px;
   padding-left: 1cm;
 }
