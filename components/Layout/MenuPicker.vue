@@ -42,7 +42,7 @@
           v-model="time"
           prepend-inner-icon="mdi-clock-time-four-outline"
           readonly
-          label="Pick a time"
+          placeholder="Pick a time"
           dense
           append-icon="mdi-chevron-down"
           height="45"
@@ -71,7 +71,7 @@
           prepend-inner-icon="mdi-clock-time-four-outline"
           readonly
           dense
-          label="Pick a time"
+          placeholder="Pick a time"
           append-icon="mdi-chevron-down"
           height="45"
           background-color="white"
